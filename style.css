@@ -1,0 +1,127 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+:root {
+    --primary-red: hsl(0, 78%, 62%);
+    --primary-cyan: hsl(180, 62%, 55%);
+    --primary-orange: hsl(34, 97%, 64%);
+    --primary-blue: hsl(212, 86%, 64%);
+
+    --neutral-Very-Dark-Blue: hsl(234, 12%, 34%);
+    --neutral-Grayish-Blue: hsl(229, 6%, 66%);
+    --neutral-Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100dvh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    padding: 3rem;
+}
+
+.description {
+    text-align: center;
+    max-width: 34em;
+    margin: auto;
+}
+
+h1 {
+    font-size: 1.5em;
+    color: var(--neutral-Grayish-Blue);
+}
+
+span {
+    color: var(--neutral-Very-Dark-Blue);
+    font-weight: 700;
+}
+
+p{
+    margin: 1rem 0;
+    color: var(--neutral-Grayish-Blue);
+}
+
+.boxes {
+    margin: 2rem 0;
+}
+
+
+.box {
+    box-shadow: 2px 4px 8px 3px var(--neutral-Grayish-Blue);
+    margin: 1rem 0;
+    border-top: 5px solid;
+    padding: 2rem;
+    border-radius: 5px;
+    text-align: right;
+}
+
+.box:nth-child(1){
+    border-color: var(--primary-cyan);
+}
+
+.center:nth-child(1) {
+    border-color: var(--primary-red); 
+}
+
+.center:nth-child(2) {
+    border-color: var(--primary-orange); 
+}
+
+
+.box:nth-child(3){
+    border-color: var(--primary-blue);  
+}
+
+h3 {
+    color: var(--neutral-Very-Dark-Blue);
+}
+
+.box h3,
+.box p{
+    text-align: left;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; }
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media (min-width: 600px) {
+
+    body {
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .boxes {
+        display: grid;
+        grid-template-columns:repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .box:nth-child(1), .box:nth-child(3) {
+        align-self: center;
+    }
+}
+
+
+
